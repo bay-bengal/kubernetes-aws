@@ -1,6 +1,6 @@
 resource "aws_vpc" "main" {
   #The CIDR block for the VPC
-  cidr_block       = "192.168.0.0/16"
+  cidr_block = "192.168.0.0/16"
 
   #Makes your instances shared on the host.
   instance_tenancy = "default"
@@ -13,12 +13,12 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   #Enable/dissable ClassicLink for the VPC
-  assign_generated_ipv6_cidr_block= false
+  assign_generated_ipv6_cidr_block = false
 
   tags = {
     Name = "main"
   }
-} 
+}
 
 /* output "vpc_id" {
   value = aws_vpc.main.id
